@@ -1,0 +1,9 @@
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\bin\Release\netstandard2.0\Common.deps.json
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\bin\Release\netstandard2.0\Common.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\bin\Release\netstandard2.0\Common.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\obj\Release\netstandard2.0\Common.csprojResolveAssemblyReference.cache
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\obj\Release\netstandard2.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\obj\Release\netstandard2.0\Common.AssemblyInfoInputs.cache
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\obj\Release\netstandard2.0\Common.AssemblyInfo.cs
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\obj\Release\netstandard2.0\Common.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\obj\Release\netstandard2.0\Common.pdb

@@ -1,0 +1,15 @@
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\bin\Debug\netstandard2.0\Application.deps.json
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\bin\Debug\netstandard2.0\Application.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\bin\Debug\netstandard2.0\Application.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\bin\Debug\netstandard2.0\Common.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\bin\Debug\netstandard2.0\DataModels.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\bin\Debug\netstandard2.0\EntityFramework.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\bin\Debug\netstandard2.0\DataModels.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\bin\Debug\netstandard2.0\EntityFramework.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\bin\Debug\netstandard2.0\Common.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.csprojResolveAssemblyReference.cache
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.AssemblyInfoInputs.cache
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.AssemblyInfo.cs
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.pdb

@@ -1,0 +1,19 @@
+﻿using Common;
+using DataModels.ComplexModels;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
+
+namespace DataModels
+{
+    public class Set
+    {
+        public Guid SetId { get; set; }
+        public Metrics Metrics { get; set; }
+        public Difficulty Difficulty { get; set; }
+
+        public Guid ExericeId { get; set; }
+        public Exercise Exercise { get; set; }
+    }
+}

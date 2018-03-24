@@ -1,0 +1,17 @@
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\WebFacade.deps.json
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\WebFacade.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\WebFacade.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\Application.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\Common.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\DataModels.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\ViewModels.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\Application.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\ViewModels.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\DataModels.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\bin\Debug\netstandard2.0\Common.pdb
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\obj\Debug\netstandard2.0\WebFacade.csprojResolveAssemblyReference.cache
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\obj\Debug\netstandard2.0\WebFacade.csproj.CoreCompileInputs.cache
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\obj\Debug\netstandard2.0\WebFacade.AssemblyInfoInputs.cache
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\obj\Debug\netstandard2.0\WebFacade.AssemblyInfo.cs
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\obj\Debug\netstandard2.0\WebFacade.dll
+C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\WebFacade\obj\Debug\netstandard2.0\WebFacade.pdb

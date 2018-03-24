@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20180317202222_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180317204007_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180317211730_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180317213053_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180317213334_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180317215056_InitialCreate.cs" />
+    <Compile Remove="Migrations\20180318093507_ThirdOne.cs" />
+    <Compile Remove="Migrations\20180318094525_ChangedIdsToGuids.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Common.csproj" />
+    <ProjectReference Include="..\DataModels\DataModels.csproj" />
+  </ItemGroup>
+
+</Project>
