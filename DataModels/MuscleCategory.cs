@@ -5,7 +5,7 @@ namespace DataModels
 {
     public class MuscleCategory
     {
-        public Guid MuscleCategoryId { get; set; }
+        public int MuscleCategoryId { get; set; }
         public string Name { get; set; }
 
         public List<MuscleGroup> MuscleGroups { get; set; }

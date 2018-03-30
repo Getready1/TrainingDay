@@ -8,7 +8,7 @@ namespace DataModels
 {
     public class Training
     {
-        public Guid TrainingId { get; set; }
+        public int TrainingId { get; set; }
         public string Name { get; set; }
         public string Comment { get; set; }
         public DateTime CreationDate { get; set; }

@@ -8,11 +8,11 @@ namespace DataModels
 {
     public class Exercise
     {
-        public Guid ExerciseId { get; set; }
+        public int ExerciseId { get; set; }
         public string Name { get; set; }
         public string ImagePath { get; set; }
 
-        public Guid TrainingId { get; set; }
+        public int TrainingId { get; set; }
         public Training Training { get; set; }
 
         public List<ExerciseCoreMuscleGroup> CoreMuscleGroups { get; set; }

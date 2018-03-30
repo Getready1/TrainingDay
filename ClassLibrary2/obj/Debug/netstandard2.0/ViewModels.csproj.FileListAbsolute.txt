@@ -25,3 +25,5 @@ D:\SideProjects\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.As
 D:\SideProjects\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.csproj.CopyComplete
 D:\SideProjects\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.dll
 D:\SideProjects\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.pdb
+D:\SideProjects\TrainingDay\ClassLibrary2\bin\Debug\netstandard2.0\ViewModels.runtimeconfig.json
+D:\SideProjects\TrainingDay\ClassLibrary2\bin\Debug\netstandard2.0\ViewModels.runtimeconfig.dev.json

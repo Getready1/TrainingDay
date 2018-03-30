@@ -6,10 +6,10 @@ namespace DataModels
 {
     public class MuscleGroup
     {
-        public Guid MuscleGroupId { get; set; }
+        public int MuscleGroupId { get; set; }
         public string Name { get; set; }
 
-        public Guid MuscleCategoryId { get; set; }
+        public int MuscleCategoryId { get; set; }
         public MuscleCategory MuscleCategory { get; set; }
 
         public List<ExerciseCoreMuscleGroup> CoreExcercises { get; set; }

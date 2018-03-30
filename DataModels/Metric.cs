@@ -15,7 +15,7 @@ namespace DataModels
         public int MetricValueId { get; set; }
         public MetricValue MetricValue { get; set; }
 
-        public Guid ExerciseTemplateId { get; set; }
+        public int ExerciseTemplateId { get; set; }
         public ExerciseTemplate ExerciseTemplate { get; set; }
     }
 }

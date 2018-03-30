@@ -11,8 +11,8 @@ using System;
 namespace EntityFramework.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20180324191002_Initial")]
-    partial class Initial
+    [Migration("20180330161654_ChangedGuidsToInts")]
+    partial class ChangedGuidsToInts
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.Exercise", b =>
                 {
-                    b.Property<Guid>("ExerciseId")
+                    b.Property<int>("ExerciseId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("ImagePath");
@@ -44,7 +44,7 @@ namespace EntityFramework.Migrations
                         .IsRequired()
                         .HasMaxLength(20);
 
-                    b.Property<Guid>("TrainingId");
+                    b.Property<int>("TrainingId");
 
                     b.HasKey("ExerciseId");
 
@@ -55,9 +55,9 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.ExerciseCoreMuscleGroup", b =>
                 {
-                    b.Property<Guid>("ExcersiceId");
+                    b.Property<int>("ExcersiceId");
 
-                    b.Property<Guid>("MuscleGroupId");
+                    b.Property<int>("MuscleGroupId");
 
                     b.HasKey("ExcersiceId", "MuscleGroupId");
 
@@ -68,9 +68,9 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.ExerciseSuppMuscleGroup", b =>
                 {
-                    b.Property<Guid>("ExcersiceId");
+                    b.Property<int>("ExcersiceId");
 
-                    b.Property<Guid>("MuscleGroupId");
+                    b.Property<int>("MuscleGroupId");
 
                     b.HasKey("ExcersiceId", "MuscleGroupId");
 
@@ -81,7 +81,7 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.ExerciseTemplate", b =>
                 {
-                    b.Property<Guid>("ExerciseTemplateId")
+                    b.Property<int>("ExerciseTemplateId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description");
@@ -97,9 +97,9 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.ExerciseTemplateCoreMuscleGroups", b =>
                 {
-                    b.Property<Guid>("ExerciseTemplateId");
+                    b.Property<int>("ExerciseTemplateId");
 
-                    b.Property<Guid>("MuscleGroupId");
+                    b.Property<int>("MuscleGroupId");
 
                     b.HasKey("ExerciseTemplateId", "MuscleGroupId");
 
@@ -110,9 +110,9 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.ExerciseTemplateSuppMuscleGroups", b =>
                 {
-                    b.Property<Guid>("ExerciseTemplateId");
+                    b.Property<int>("ExerciseTemplateId");
 
-                    b.Property<Guid>("MuscleGroupId");
+                    b.Property<int>("MuscleGroupId");
 
                     b.HasKey("ExerciseTemplateId", "MuscleGroupId");
 
@@ -126,7 +126,7 @@ namespace EntityFramework.Migrations
                     b.Property<int>("MetricId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("ExerciseTemplateId");
+                    b.Property<int>("ExerciseTemplateId");
 
                     b.Property<int>("MetricTypeId");
 
@@ -165,7 +165,7 @@ namespace EntityFramework.Migrations
 
                     b.Property<int>("MetricId");
 
-                    b.Property<Guid?>("SetId");
+                    b.Property<int?>("SetId");
 
                     b.Property<double>("Value");
 
@@ -178,7 +178,7 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.MuscleCategory", b =>
                 {
-                    b.Property<Guid>("MuscleCategoryId")
+                    b.Property<int>("MuscleCategoryId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name")
@@ -192,10 +192,10 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.MuscleGroup", b =>
                 {
-                    b.Property<Guid>("MuscleGroupId")
+                    b.Property<int>("MuscleGroupId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("MuscleCategoryId");
+                    b.Property<int>("MuscleCategoryId");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -210,14 +210,14 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.Set", b =>
                 {
-                    b.Property<Guid>("SetId")
+                    b.Property<int>("SetId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int?>("DifficultyId");
 
-                    b.Property<Guid?>("ExerciseId");
+                    b.Property<int?>("ExerciseId");
 
-                    b.Property<Guid>("ExericeId");
+                    b.Property<int>("ExericeId");
 
                     b.HasKey("SetId");
 
@@ -230,7 +230,7 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.Training", b =>
                 {
-                    b.Property<Guid>("TrainingId")
+                    b.Property<int>("TrainingId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Comment");
@@ -250,9 +250,9 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.TrainingMuscleCategories", b =>
                 {
-                    b.Property<Guid>("MuscleCategoryId");
+                    b.Property<int>("MuscleCategoryId");
 
-                    b.Property<Guid>("TrainingId");
+                    b.Property<int>("TrainingId");
 
                     b.HasKey("MuscleCategoryId", "TrainingId");
 
@@ -299,7 +299,7 @@ namespace EntityFramework.Migrations
                 {
                     b.OwnsOne("System.Collections.Generic.List<DataModels.Metric>", "Metrics", b1 =>
                         {
-                            b1.Property<Guid>("ExerciseTemplateId");
+                            b1.Property<int>("ExerciseTemplateId");
 
                             b1.Property<int>("Capacity");
 
@@ -383,7 +383,7 @@ namespace EntityFramework.Migrations
 
                     b.OwnsOne("DataModels.ComplexModels.Metrics", "Metrics", b1 =>
                         {
-                            b1.Property<Guid>("SetId");
+                            b1.Property<int>("SetId");
 
                             b1.Property<double>("Distance");
 

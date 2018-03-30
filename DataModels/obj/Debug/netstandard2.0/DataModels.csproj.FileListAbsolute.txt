@@ -25,3 +25,5 @@ D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.Assem
 D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CopyComplete
 D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.dll
 D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
+D:\SideProjects\TrainingDay\DataModels\bin\Debug\netstandard2.0\DataModels.runtimeconfig.json
+D:\SideProjects\TrainingDay\DataModels\bin\Debug\netstandard2.0\DataModels.runtimeconfig.dev.json

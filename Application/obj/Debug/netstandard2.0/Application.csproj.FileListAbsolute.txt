@@ -29,3 +29,5 @@ D:\SideProjects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.Ass
 D:\SideProjects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.csproj.CopyComplete
 D:\SideProjects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.dll
 D:\SideProjects\TrainingDay\Application\obj\Debug\netstandard2.0\Application.pdb
+D:\SideProjects\TrainingDay\Application\bin\Debug\netstandard2.0\Application.runtimeconfig.json
+D:\SideProjects\TrainingDay\Application\bin\Debug\netstandard2.0\Application.runtimeconfig.dev.json

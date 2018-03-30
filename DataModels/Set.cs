@@ -10,11 +10,11 @@ namespace DataModels
 {
     public class Set
     {
-        public Guid SetId { get; set; }
+        public int SetId { get; set; }
         public Metrics Metrics { get; set; }
         public Difficulty Difficulty { get; set; }
 
-        public Guid ExericeId { get; set; }
+        public int ExericeId { get; set; }
         public Exercise Exercise { get; set; }
 
         public List<MetricValue> MetricValues { get; set; }

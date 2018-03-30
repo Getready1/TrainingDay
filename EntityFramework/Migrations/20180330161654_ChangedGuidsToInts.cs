@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace EntityFramework.Migrations
 {
-    public partial class Initial : Migration
+    public partial class ChangedGuidsToInts : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,7 +26,8 @@ namespace EntityFramework.Migrations
                 name: "ExerciseTemplates",
                 columns: table => new
                 {
-                    ExerciseTemplateId = table.Column<Guid>(nullable: false),
+                    ExerciseTemplateId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Description = table.Column<string>(nullable: true),
                     Name = table.Column<string>(maxLength: 20, nullable: false),
                     Metrics_Capacity = table.Column<int>(nullable: false)
@@ -53,7 +54,8 @@ namespace EntityFramework.Migrations
                 name: "MuscleCategories",
                 columns: table => new
                 {
-                    MuscleCategoryId = table.Column<Guid>(nullable: false),
+                    MuscleCategoryId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 20, nullable: false)
                 },
                 constraints: table =>
@@ -65,7 +67,8 @@ namespace EntityFramework.Migrations
                 name: "Trainings",
                 columns: table => new
                 {
-                    TrainingId = table.Column<Guid>(nullable: false),
+                    TrainingId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Comment = table.Column<string>(nullable: true),
                     CreationDate = table.Column<DateTime>(nullable: false),
                     ModifiedDate = table.Column<DateTime>(nullable: false),
@@ -80,8 +83,9 @@ namespace EntityFramework.Migrations
                 name: "MuscleGroups",
                 columns: table => new
                 {
-                    MuscleGroupId = table.Column<Guid>(nullable: false),
-                    MuscleCategoryId = table.Column<Guid>(nullable: false),
+                    MuscleGroupId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    MuscleCategoryId = table.Column<int>(nullable: false),
                     Name = table.Column<string>(maxLength: 20, nullable: false)
                 },
                 constraints: table =>
@@ -99,10 +103,11 @@ namespace EntityFramework.Migrations
                 name: "Exercises",
                 columns: table => new
                 {
-                    ExerciseId = table.Column<Guid>(nullable: false),
+                    ExerciseId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ImagePath = table.Column<string>(nullable: true),
                     Name = table.Column<string>(maxLength: 20, nullable: false),
-                    TrainingId = table.Column<Guid>(nullable: false)
+                    TrainingId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -119,8 +124,8 @@ namespace EntityFramework.Migrations
                 name: "TrainingMuscleCategories",
                 columns: table => new
                 {
-                    MuscleCategoryId = table.Column<Guid>(nullable: false),
-                    TrainingId = table.Column<Guid>(nullable: false)
+                    MuscleCategoryId = table.Column<int>(nullable: false),
+                    TrainingId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -143,8 +148,8 @@ namespace EntityFramework.Migrations
                 name: "ExerciseTemplateCoreMuscleGroups",
                 columns: table => new
                 {
-                    ExerciseTemplateId = table.Column<Guid>(nullable: false),
-                    MuscleGroupId = table.Column<Guid>(nullable: false)
+                    ExerciseTemplateId = table.Column<int>(nullable: false),
+                    MuscleGroupId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -167,8 +172,8 @@ namespace EntityFramework.Migrations
                 name: "ExerciseTemplateSuppMuscleGroups",
                 columns: table => new
                 {
-                    ExerciseTemplateId = table.Column<Guid>(nullable: false),
-                    MuscleGroupId = table.Column<Guid>(nullable: false)
+                    ExerciseTemplateId = table.Column<int>(nullable: false),
+                    MuscleGroupId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -191,8 +196,8 @@ namespace EntityFramework.Migrations
                 name: "ExerciseCoreMuscleGroup",
                 columns: table => new
                 {
-                    ExcersiceId = table.Column<Guid>(nullable: false),
-                    MuscleGroupId = table.Column<Guid>(nullable: false)
+                    ExcersiceId = table.Column<int>(nullable: false),
+                    MuscleGroupId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -215,8 +220,8 @@ namespace EntityFramework.Migrations
                 name: "ExerciseSuppMuscleGroup",
                 columns: table => new
                 {
-                    ExcersiceId = table.Column<Guid>(nullable: false),
-                    MuscleGroupId = table.Column<Guid>(nullable: false)
+                    ExcersiceId = table.Column<int>(nullable: false),
+                    MuscleGroupId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -239,10 +244,11 @@ namespace EntityFramework.Migrations
                 name: "Sets",
                 columns: table => new
                 {
-                    SetId = table.Column<Guid>(nullable: false),
+                    SetId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     DifficultyId = table.Column<int>(nullable: true),
-                    ExerciseId = table.Column<Guid>(nullable: true),
-                    ExericeId = table.Column<Guid>(nullable: false),
+                    ExerciseId = table.Column<int>(nullable: true),
+                    ExericeId = table.Column<int>(nullable: false),
                     Metrics_Distance = table.Column<double>(nullable: false),
                     Metrics_Duration = table.Column<double>(nullable: false),
                     Metrics_Repetitions = table.Column<int>(nullable: false),
@@ -272,7 +278,7 @@ namespace EntityFramework.Migrations
                     MetricValueId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     MetricId = table.Column<int>(nullable: false),
-                    SetId = table.Column<Guid>(nullable: true),
+                    SetId = table.Column<int>(nullable: true),
                     Value = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
@@ -292,7 +298,7 @@ namespace EntityFramework.Migrations
                 {
                     MetricId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ExerciseTemplateId = table.Column<Guid>(nullable: false),
+                    ExerciseTemplateId = table.Column<int>(nullable: false),
                     MetricTypeId = table.Column<int>(nullable: false),
                     MetricValueId = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true)

@@ -25,3 +25,5 @@ D:\SideProjects\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFrame
 D:\SideProjects\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.csproj.CopyComplete
 D:\SideProjects\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.dll
 D:\SideProjects\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.pdb
+D:\SideProjects\TrainingDay\EntityFramework\bin\Debug\netstandard2.0\EntityFramework.runtimeconfig.json
+D:\SideProjects\TrainingDay\EntityFramework\bin\Debug\netstandard2.0\EntityFramework.runtimeconfig.dev.json

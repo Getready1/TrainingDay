@@ -11,8 +11,6 @@ namespace EntityFramework.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<ExerciseTemplate> builder)
         {
-            builder.HasKey(m => m.ExerciseTemplateId);
-            builder.Property(m => m.ExerciseTemplateId).ValueGeneratedOnAdd();
             builder.Property(m => m.Name).IsRequired().HasMaxLength(20);
             builder.OwnsOne(m => m.Metrics);
         }

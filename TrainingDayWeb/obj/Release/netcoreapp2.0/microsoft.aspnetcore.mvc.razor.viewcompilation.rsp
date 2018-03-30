@@ -3,6 +3,8 @@ D:\SideProjects\TrainingDay\TrainingDayWeb
 --application-name=TrainingDayWeb
 --content-root=D:\SideProjects\TrainingDay\TrainingDayWeb
 --file=D:\SideProjects\TrainingDay\TrainingDayWeb\Views\Shared\_Layout.cshtml
+--file=D:\SideProjects\TrainingDay\TrainingDayWeb\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=D:\SideProjects\TrainingDay\TrainingDayWeb\Views\Training\Create.cshtml
 --file=D:\SideProjects\TrainingDay\TrainingDayWeb\Views\Training\Index.cshtml
 --file=D:\SideProjects\TrainingDay\TrainingDayWeb\Views\_ViewImports.cshtml
 --file=D:\SideProjects\TrainingDay\TrainingDayWeb\Views\_ViewStart.cshtml

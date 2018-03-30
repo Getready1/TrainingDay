@@ -11,7 +11,6 @@ namespace EntityFramework.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<Exercise> builder)
         {
-            builder.HasKey(m => m.ExerciseId);
             builder.Property(m => m.ExerciseId).ValueGeneratedOnAdd();
             builder.Property(m => m.Name).IsRequired().HasMaxLength(20);
         }

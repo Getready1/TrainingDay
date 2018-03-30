@@ -7,7 +7,7 @@ namespace DataModels
 {
     public class ExerciseTemplate
     {
-        public Guid ExerciseTemplateId { get; set; }
+        public int ExerciseTemplateId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
