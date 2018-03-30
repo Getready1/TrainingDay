@@ -13,7 +13,7 @@ using ViewModels;
 namespace TrainingDayWeb.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Trainings")]
+    [Route("api/trainings")]
     public class TrainingsController : Controller
     {
         private ITrainingManager trainingManager;
@@ -30,7 +30,14 @@ namespace TrainingDayWeb.Controllers
         public IEnumerable<TrainingViewModel> Get()
         {
             var x = trainingManager.GetAll();
-            Mapper.Initialize(cfg => cfg.CreateMap<Training, TrainingViewModel>().ForMember(m => m.MuscleCategories, o => o.MapFrom(s => s.MuscleCategories.Select(r => r.MuscleCategory))));
+
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<Training, TrainingViewModel>().ForMember(m => m.MuscleCategories, o => o.MapFrom(s => s.MuscleCategories.Select(r => r.MuscleCategory))).ForMember(v => v.Id, o => o.MapFrom(s => s.TrainingId));
+                cfg.CreateMap<Exercise, ExerciseViewModel>().ForMember(m => m.ExerciseId, o => o.MapFrom(z => z.ExerciseId));
+                cfg.CreateMap<MuscleCategory, MuscleCategoryViewModel>().ForMember(m => m.Id, o => o.MapFrom(s => s.MuscleCategoryId));
+            });
+
             var collection = new List<TrainingViewModel>();
 
             foreach (var item in x)
@@ -42,29 +49,29 @@ namespace TrainingDayWeb.Controllers
             return collection;
         }
 
-        // GET: api/Trainings/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //// GET: api/Trainings/5
+        //[HttpGet("{id}", Name = "Get")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
         
-        // POST: api/Trainings
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
+        //// POST: api/Trainings
+        //[HttpPost]
+        //public void Post([FromBody]string value)
+        //{
+        //}
         
-        // PUT: api/Trainings/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+        //// PUT: api/Trainings/5
+        //[HttpPut("{id}")]
+        //public void Put(int id, [FromBody]string value)
+        //{
+        //}
         
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        //// DELETE: api/ApiWithActions/5
+        //[HttpDelete("{id}")]
+        //public void Delete(int id)
+        //{
+        //}
     }
 }

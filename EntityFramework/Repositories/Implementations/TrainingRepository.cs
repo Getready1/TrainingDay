@@ -16,7 +16,7 @@ namespace EntityFramework.Repositories.Implementations
 
         public List<Training> GetAllTrainings()
         {
-            return GetAll().Include(m => m.MuscleCategories).ThenInclude(mc => mc.MuscleCategory).ToList();
+            return GetAll().Include(m => m.MuscleCategories).ThenInclude(mc => mc.MuscleCategory).Include(m => m.Exercises).ToList();
         }
 
         public void Update(Training training) => context.Entry(training).State = EntityState.Modified;

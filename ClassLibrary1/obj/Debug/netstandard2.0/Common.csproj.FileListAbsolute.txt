@@ -7,3 +7,12 @@ C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary
 C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
 C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.dll
 C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.pdb
+D:\SideProjects\TrainingDay\ClassLibrary1\bin\Debug\netstandard2.0\Common.deps.json
+D:\SideProjects\TrainingDay\ClassLibrary1\bin\Debug\netstandard2.0\Common.dll
+D:\SideProjects\TrainingDay\ClassLibrary1\bin\Debug\netstandard2.0\Common.pdb
+D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.csprojResolveAssemblyReference.cache
+D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.csproj.CoreCompileInputs.cache
+D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.AssemblyInfoInputs.cache
+D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
+D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.dll
+D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.pdb

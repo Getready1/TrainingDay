@@ -1,0 +1,16 @@
+D:\SideProjects\TrainingDay\Application\bin\Release\netstandard2.0\Application.deps.json
+D:\SideProjects\TrainingDay\Application\bin\Release\netstandard2.0\Application.dll
+D:\SideProjects\TrainingDay\Application\bin\Release\netstandard2.0\Application.pdb
+D:\SideProjects\TrainingDay\Application\bin\Release\netstandard2.0\Common.dll
+D:\SideProjects\TrainingDay\Application\bin\Release\netstandard2.0\DataModels.dll
+D:\SideProjects\TrainingDay\Application\bin\Release\netstandard2.0\EntityFramework.dll
+D:\SideProjects\TrainingDay\Application\bin\Release\netstandard2.0\DataModels.pdb
+D:\SideProjects\TrainingDay\Application\bin\Release\netstandard2.0\EntityFramework.pdb
+D:\SideProjects\TrainingDay\Application\bin\Release\netstandard2.0\Common.pdb
+D:\SideProjects\TrainingDay\Application\obj\Release\netstandard2.0\Application.csprojResolveAssemblyReference.cache
+D:\SideProjects\TrainingDay\Application\obj\Release\netstandard2.0\Application.csproj.CoreCompileInputs.cache
+D:\SideProjects\TrainingDay\Application\obj\Release\netstandard2.0\Application.AssemblyInfoInputs.cache
+D:\SideProjects\TrainingDay\Application\obj\Release\netstandard2.0\Application.AssemblyInfo.cs
+D:\SideProjects\TrainingDay\Application\obj\Release\netstandard2.0\Application.csproj.CopyComplete
+D:\SideProjects\TrainingDay\Application\obj\Release\netstandard2.0\Application.dll
+D:\SideProjects\TrainingDay\Application\obj\Release\netstandard2.0\Application.pdb

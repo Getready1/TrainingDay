@@ -29,7 +29,7 @@ namespace EntityFramework.Migrations
 
                     b.HasKey("DifficultyId");
 
-                    b.ToTable("Difficulty");
+                    b.ToTable("DifficultyLevel");
                 });
 
             modelBuilder.Entity("DataModels.Exercise", b =>
@@ -78,6 +78,103 @@ namespace EntityFramework.Migrations
                     b.ToTable("ExerciseSuppMuscleGroup");
                 });
 
+            modelBuilder.Entity("DataModels.ExerciseTemplate", b =>
+                {
+                    b.Property<Guid>("ExerciseTemplateId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.HasKey("ExerciseTemplateId");
+
+                    b.ToTable("ExerciseTemplates");
+                });
+
+            modelBuilder.Entity("DataModels.ExerciseTemplateCoreMuscleGroups", b =>
+                {
+                    b.Property<Guid>("ExerciseTemplateId");
+
+                    b.Property<Guid>("MuscleGroupId");
+
+                    b.HasKey("ExerciseTemplateId", "MuscleGroupId");
+
+                    b.HasIndex("MuscleGroupId");
+
+                    b.ToTable("ExerciseTemplateCoreMuscleGroups");
+                });
+
+            modelBuilder.Entity("DataModels.ExerciseTemplateSuppMuscleGroups", b =>
+                {
+                    b.Property<Guid>("ExerciseTemplateId");
+
+                    b.Property<Guid>("MuscleGroupId");
+
+                    b.HasKey("ExerciseTemplateId", "MuscleGroupId");
+
+                    b.HasIndex("MuscleGroupId");
+
+                    b.ToTable("ExerciseTemplateSuppMuscleGroups");
+                });
+
+            modelBuilder.Entity("DataModels.Metric", b =>
+                {
+                    b.Property<int>("MetricId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid>("ExerciseTemplateId");
+
+                    b.Property<int>("MetricTypeId");
+
+                    b.Property<int>("MetricValueId");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("MetricId");
+
+                    b.HasIndex("ExerciseTemplateId");
+
+                    b.HasIndex("MetricTypeId");
+
+                    b.HasIndex("MetricValueId")
+                        .IsUnique();
+
+                    b.ToTable("Metrics");
+                });
+
+            modelBuilder.Entity("DataModels.MetricType", b =>
+                {
+                    b.Property<int>("MetricTypeId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("MetricTypeId");
+
+                    b.ToTable("MetricTypes");
+                });
+
+            modelBuilder.Entity("DataModels.MetricValue", b =>
+                {
+                    b.Property<int>("MetricValueId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("MetricId");
+
+                    b.Property<Guid?>("SetId");
+
+                    b.Property<double>("Value");
+
+                    b.HasKey("MetricValueId");
+
+                    b.HasIndex("SetId");
+
+                    b.ToTable("MetricValues");
+                });
+
             modelBuilder.Entity("DataModels.MuscleCategory", b =>
                 {
                     b.Property<Guid>("MuscleCategoryId")
@@ -89,7 +186,7 @@ namespace EntityFramework.Migrations
 
                     b.HasKey("MuscleCategoryId");
 
-                    b.ToTable("MuscleCategory");
+                    b.ToTable("MuscleCategories");
                 });
 
             modelBuilder.Entity("DataModels.MuscleGroup", b =>
@@ -107,7 +204,7 @@ namespace EntityFramework.Migrations
 
                     b.HasIndex("MuscleCategoryId");
 
-                    b.ToTable("MuscleGroup");
+                    b.ToTable("MuscleGroups");
                 });
 
             modelBuilder.Entity("DataModels.Set", b =>
@@ -195,6 +292,74 @@ namespace EntityFramework.Migrations
                         .WithMany("SupExcercises")
                         .HasForeignKey("MuscleGroupId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("DataModels.ExerciseTemplate", b =>
+                {
+                    b.OwnsOne("System.Collections.Generic.List<DataModels.Metric>", "Metrics", b1 =>
+                        {
+                            b1.Property<Guid>("ExerciseTemplateId");
+
+                            b1.Property<int>("Capacity");
+
+                            b1.ToTable("ExerciseTemplates");
+
+                            b1.HasOne("DataModels.ExerciseTemplate")
+                                .WithOne("Metrics")
+                                .HasForeignKey("System.Collections.Generic.List<DataModels.Metric>", "ExerciseTemplateId")
+                                .OnDelete(DeleteBehavior.Cascade);
+                        });
+                });
+
+            modelBuilder.Entity("DataModels.ExerciseTemplateCoreMuscleGroups", b =>
+                {
+                    b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
+                        .WithMany("CoreMuscleGroups")
+                        .HasForeignKey("ExerciseTemplateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DataModels.MuscleGroup", "MuscleGroup")
+                        .WithMany("CoreExcerciseTemplates")
+                        .HasForeignKey("MuscleGroupId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("DataModels.ExerciseTemplateSuppMuscleGroups", b =>
+                {
+                    b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
+                        .WithMany("SupplimentaryMuscleGroups")
+                        .HasForeignKey("ExerciseTemplateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DataModels.MuscleGroup", "MuscleGroup")
+                        .WithMany("SupExcercisesTemplates")
+                        .HasForeignKey("MuscleGroupId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("DataModels.Metric", b =>
+                {
+                    b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
+                        .WithMany()
+                        .HasForeignKey("ExerciseTemplateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DataModels.MetricType", "MetricType")
+                        .WithMany("Metrics")
+                        .HasForeignKey("MetricTypeId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DataModels.MetricValue", "MetricValue")
+                        .WithOne("Metric")
+                        .HasForeignKey("DataModels.Metric", "MetricValueId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("DataModels.MetricValue", b =>
+                {
+                    b.HasOne("DataModels.Set")
+                        .WithMany("MetricValues")
+                        .HasForeignKey("SetId");
                 });
 
             modelBuilder.Entity("DataModels.MuscleGroup", b =>

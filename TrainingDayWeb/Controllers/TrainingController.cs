@@ -22,7 +22,7 @@ namespace TrainingDayWeb.Controllers
         public IActionResult Index()
         {
             var trainings = trainingManager.GetAll();
-            Mapper.Initialize(cfg => cfg.CreateMap<Training, TrainingViewModel>().ForMember(m => m.MuscleCategories, o => o.MapFrom(s => s.MuscleCategories.Select(r => r.MuscleCategory))));
+            //Mapper.Initialize(cfg => cfg.CreateMap<Training, TrainingViewModel>().ForMember(m => m.MuscleCategories, o => o.MapFrom(s => s.MuscleCategories.Select(r => r.MuscleCategory))));
             var collection = new List<TrainingViewModel>();
 
             foreach (var item in trainings)

@@ -1,8 +1,10 @@
 ﻿using Application.ManagerContracts;
 using DataModels;
 using EntityFramework.Repositories.Contracts;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Application.ManagerImplementations
@@ -28,7 +30,7 @@ namespace Application.ManagerImplementations
 
         public List<Exercise> GetAll()
         {
-            throw new NotImplementedException();
+            return exerciseRepository.GetAll().ToList();
         }
 
         public Training GetById(Exercise id)

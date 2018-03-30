@@ -11,9 +11,8 @@ namespace ViewModels
         public string Name { get; set; }
         public string Comment { get; set; }
         public DateTime CreationDate { get; set; }
-        public DateTime ModifiedDate { get; set; }
 
-        public List<Exercise> Exercises { get; set; }
-        public List<MuscleCategory> MuscleCategories { get; set; }
+        public List<ExerciseViewModel> Exercises { get; set; }
+        public List<MuscleCategoryViewModel> MuscleCategories { get; set; }
     }
 }

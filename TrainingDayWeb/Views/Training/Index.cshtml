@@ -21,9 +21,6 @@
             @Html.DisplayNameFor(m => m.CreationDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ModifiedDate)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.MuscleCategories)
         </th>
         <th></th>
@@ -40,9 +37,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CreationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModifiedDate)
             </td>
             <td>
                 @foreach (var group in item.MuscleCategories)

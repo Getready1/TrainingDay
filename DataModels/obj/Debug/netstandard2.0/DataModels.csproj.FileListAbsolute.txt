@@ -11,3 +11,17 @@ C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\DataModels\o
 C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
 C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.dll
 C:\Users\Getready\Documents\Visual Studio 2017\Projects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
+D:\SideProjects\TrainingDay\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+D:\SideProjects\TrainingDay\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+D:\SideProjects\TrainingDay\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+D:\SideProjects\TrainingDay\DataModels\bin\Debug\netstandard2.0\Common.dll
+D:\SideProjects\TrainingDay\DataModels\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+D:\SideProjects\TrainingDay\DataModels\bin\Debug\netstandard2.0\Common.pdb
+D:\SideProjects\TrainingDay\DataModels\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.csprojResolveAssemblyReference.cache
+D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CopyComplete
+D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.pdb

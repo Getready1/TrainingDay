@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQtlAs3WcoEizsDztZJHasQAAAAACAAAAAAADZgAAwAAAABAAAACV1DkhmJb8zFd9iRh1eAkOAAAAAASAAACgAAAAEAAAAOdUk6xg+ZlQ6V7kxaTb7xGAAAAAqiOPwEBgy66RWMUMfa9UMVi5F28BUJxMjFIBps5plX9EROCSS+E3KaSSPuyLrhy23UdjiuTvrMeoY9ROy87LnGy14LojwyKm+kJXYBVz+z41J2mG1HHv1IBZnvmtJknrriXY7CW57fivospQpcQAg1Wt6rRn0b3hfKptEkt69g4UAAAA2eqfeItdCYpAJv2u4IZIYwm/qNs=</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:trainingday.database.windows.net,1433;Initial Catalog=TrainingDayWeb20180327110600_db;User Id=stibulschii@trainingday;Password=Ialoveni21404</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="EntityFramework.AppDataContext">
+      <Value>Data Source=tcp:trainingday.database.windows.net,1433;Initial Catalog=TrainingDayWeb20180327110600_db;User Id=stibulschii@trainingday;Password=Ialoveni21404</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -32,12 +32,13 @@ namespace TrainingDayWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddAutoMapper();
-            services.AddMvc();
-            services.AddAutofac();
+            services.AddDbContext<AppDataContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            var connection = @"Server=(LocalDB)\v11.0;Database=TrainingDayDb;Trusted_Connection=True;";
-            services.AddDbContext<AppDataContext>(options => options.UseSqlServer(connection));
+            services.AddAutoMapper();
+            services.AddMvc().AddJsonOptions(
+            options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddAutofac();
 
 
             var containerBuilder = new ContainerBuilder();
@@ -54,6 +55,7 @@ namespace TrainingDayWeb
             {
                 app.UseDeveloperExceptionPage();
             }
+
 
             app.UseStaticFiles();
 

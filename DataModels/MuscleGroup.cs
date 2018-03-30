@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace DataModels
 {
@@ -16,5 +14,8 @@ namespace DataModels
 
         public List<ExerciseCoreMuscleGroup> CoreExcercises { get; set; }
         public List<ExerciseSuppMuscleGroup> SupExcercises { get; set; }
+
+        public List<ExerciseTemplateCoreMuscleGroups> CoreExcerciseTemplates { get; set; }
+        public List<ExerciseTemplateSuppMuscleGroups> SupExcercisesTemplates { get; set; }
     }
 }

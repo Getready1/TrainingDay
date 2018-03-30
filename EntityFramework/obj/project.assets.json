@@ -225,7 +225,7 @@
           }
         }
       },
-      "NETStandard.Library/2.0.0": {
+      "NETStandard.Library/2.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -317,7 +317,7 @@
           "lib/netstandard2.0/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel.Annotations/4.4.0": {
+      "System.ComponentModel.Annotations/4.4.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.ComponentModel.Annotations.dll": {}
@@ -1049,10 +1049,10 @@
         "version.txt"
       ]
     },
-    "NETStandard.Library/2.0.0": {
-      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+    "NETStandard.Library/2.0.1": {
+      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
       "type": "package",
-      "path": "netstandard.library/2.0.0",
+      "path": "netstandard.library/2.0.1",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -1173,7 +1173,7 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.0.nupkg.sha512",
+        "netstandard.library.2.0.1.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     },
@@ -1338,10 +1338,10 @@
         "version.txt"
       ]
     },
-    "System.ComponentModel.Annotations/4.4.0": {
-      "sha512": "29K3DQ+IGU7LBaMjTo7SI7T7X/tsMtLvz1p56LJ556Iu0Dw3pKZw5g8yCYCWMRxrOF0Hr0FU0FwW0o42y2sb3A==",
+    "System.ComponentModel.Annotations/4.4.1": {
+      "sha512": "ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
       "type": "package",
-      "path": "system.componentmodel.annotations/4.4.0",
+      "path": "system.componentmodel.annotations/4.4.1",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -1417,7 +1417,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.4.4.0.nupkg.sha512",
+        "system.componentmodel.annotations.4.4.1.nupkg.sha512",
         "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -3025,30 +3025,28 @@
       "DataModels >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.2",
-      "NETStandard.Library >= 2.0.0"
+      "NETStandard.Library >= 2.0.1",
+      "System.ComponentModel.Annotations >= 4.4.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Getready\\.nuget\\packages\\": {},
+    "C:\\Users\\stibulschii\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Getready\\Documents\\Visual Studio 2017\\Projects\\TrainingDay\\EntityFramework\\EntityFramework.csproj",
+      "projectUniqueName": "D:\\SideProjects\\TrainingDay\\EntityFramework\\EntityFramework.csproj",
       "projectName": "EntityFramework",
-      "projectPath": "C:\\Users\\Getready\\Documents\\Visual Studio 2017\\Projects\\TrainingDay\\EntityFramework\\EntityFramework.csproj",
-      "packagesPath": "C:\\Users\\Getready\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Getready\\Documents\\Visual Studio 2017\\Projects\\TrainingDay\\EntityFramework\\obj\\",
+      "projectPath": "D:\\SideProjects\\TrainingDay\\EntityFramework\\EntityFramework.csproj",
+      "packagesPath": "C:\\Users\\stibulschii\\.nuget\\packages\\",
+      "outputPath": "D:\\SideProjects\\TrainingDay\\EntityFramework\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Getready\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\stibulschii\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3061,11 +3059,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Getready\\Documents\\Visual Studio 2017\\Projects\\TrainingDay\\DataModels\\DataModels.csproj": {
-              "projectPath": "C:\\Users\\Getready\\Documents\\Visual Studio 2017\\Projects\\TrainingDay\\DataModels\\DataModels.csproj"
+            "D:\\SideProjects\\TrainingDay\\ClassLibrary1\\Common.csproj": {
+              "projectPath": "D:\\SideProjects\\TrainingDay\\ClassLibrary1\\Common.csproj"
             },
-            "C:\\Users\\Getready\\Documents\\Visual Studio 2017\\Projects\\TrainingDay\\ClassLibrary1\\Common.csproj": {
-              "projectPath": "C:\\Users\\Getready\\Documents\\Visual Studio 2017\\Projects\\TrainingDay\\ClassLibrary1\\Common.csproj"
+            "D:\\SideProjects\\TrainingDay\\DataModels\\DataModels.csproj": {
+              "projectPath": "D:\\SideProjects\\TrainingDay\\DataModels\\DataModels.csproj"
             }
           }
         }
@@ -3090,8 +3088,12 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "[2.0.1, )",
             "autoReferenced": true
+          },
+          "System.ComponentModel.Annotations": {
+            "target": "Package",
+            "version": "[4.4.1, )"
           }
         },
         "imports": [
