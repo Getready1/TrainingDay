@@ -37,7 +37,9 @@ namespace EntityFramework
             modelBuilder.ApplyConfiguration(new ExerciseTemplateSuppMuscleGroupConfig());
             modelBuilder.ApplyConfiguration(new ExerciseTemplateCoreMuscleGroupConfig());
             modelBuilder.ApplyConfiguration(new ExerciseTemplateConfig());
-            modelBuilder.ApplyConfiguration(new MetricValueConfig());
+            modelBuilder.ApplyConfiguration(new MetricExerciseTemplatesConfig());
+            modelBuilder.ApplyConfiguration(new MetricMetricValuesConfig());
+            // awdawdawdawdawd
         }
     }
 }

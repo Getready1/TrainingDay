@@ -9,7 +9,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [DifficultyLevel] (
         [DifficultyId] int NOT NULL IDENTITY,
@@ -20,20 +20,19 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [ExerciseTemplates] (
         [ExerciseTemplateId] int NOT NULL IDENTITY,
         [Description] nvarchar(max) NULL,
         [Name] nvarchar(20) NOT NULL,
-        [Metrics_Capacity] int NOT NULL,
         CONSTRAINT [PK_ExerciseTemplates] PRIMARY KEY ([ExerciseTemplateId])
     );
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [MetricTypes] (
         [MetricTypeId] int NOT NULL IDENTITY,
@@ -44,7 +43,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [MuscleCategories] (
         [MuscleCategoryId] int NOT NULL IDENTITY,
@@ -55,7 +54,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [Trainings] (
         [TrainingId] int NOT NULL IDENTITY,
@@ -69,7 +68,21 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
+BEGIN
+    CREATE TABLE [Metrics] (
+        [MetricId] int NOT NULL IDENTITY,
+        [MetricTypeId] int NOT NULL,
+        [MetricValueId] int NULL,
+        [Name] nvarchar(max) NULL,
+        CONSTRAINT [PK_Metrics] PRIMARY KEY ([MetricId]),
+        CONSTRAINT [FK_Metrics_MetricTypes_MetricTypeId] FOREIGN KEY ([MetricTypeId]) REFERENCES [MetricTypes] ([MetricTypeId]) ON DELETE CASCADE
+    );
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [MuscleGroups] (
         [MuscleGroupId] int NOT NULL IDENTITY,
@@ -82,7 +95,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [Exercises] (
         [ExerciseId] int NOT NULL IDENTITY,
@@ -96,7 +109,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [TrainingMuscleCategories] (
         [MuscleCategoryId] int NOT NULL,
@@ -109,7 +122,20 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
+BEGIN
+    CREATE TABLE [MetricExerciseTemplates] (
+        [ExerciseTemplateId] int NOT NULL,
+        [MetricId] int NOT NULL,
+        CONSTRAINT [PK_MetricExerciseTemplates] PRIMARY KEY ([ExerciseTemplateId], [MetricId]),
+        CONSTRAINT [FK_MetricExerciseTemplates_ExerciseTemplates_ExerciseTemplateId] FOREIGN KEY ([ExerciseTemplateId]) REFERENCES [ExerciseTemplates] ([ExerciseTemplateId]) ON DELETE CASCADE,
+        CONSTRAINT [FK_MetricExerciseTemplates_Metrics_MetricId] FOREIGN KEY ([MetricId]) REFERENCES [Metrics] ([MetricId]) ON DELETE CASCADE
+    );
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [ExerciseTemplateCoreMuscleGroups] (
         [ExerciseTemplateId] int NOT NULL,
@@ -122,7 +148,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [ExerciseTemplateSuppMuscleGroups] (
         [ExerciseTemplateId] int NOT NULL,
@@ -135,7 +161,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [ExerciseCoreMuscleGroup] (
         [ExcersiceId] int NOT NULL,
@@ -148,7 +174,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [ExerciseSuppMuscleGroup] (
         [ExcersiceId] int NOT NULL,
@@ -161,7 +187,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [Sets] (
         [SetId] int NOT NULL IDENTITY,
@@ -180,7 +206,7 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE TABLE [MetricValues] (
         [MetricValueId] int NOT NULL IDENTITY,
@@ -194,118 +220,114 @@ END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
-    CREATE TABLE [Metrics] (
-        [MetricId] int NOT NULL IDENTITY,
-        [ExerciseTemplateId] int NOT NULL,
-        [MetricTypeId] int NOT NULL,
+    CREATE TABLE [MetricMetricValues] (
+        [MetricId] int NOT NULL,
         [MetricValueId] int NOT NULL,
-        [Name] nvarchar(max) NULL,
-        CONSTRAINT [PK_Metrics] PRIMARY KEY ([MetricId]),
-        CONSTRAINT [FK_Metrics_ExerciseTemplates_ExerciseTemplateId] FOREIGN KEY ([ExerciseTemplateId]) REFERENCES [ExerciseTemplates] ([ExerciseTemplateId]) ON DELETE CASCADE,
-        CONSTRAINT [FK_Metrics_MetricTypes_MetricTypeId] FOREIGN KEY ([MetricTypeId]) REFERENCES [MetricTypes] ([MetricTypeId]) ON DELETE CASCADE,
-        CONSTRAINT [FK_Metrics_MetricValues_MetricValueId] FOREIGN KEY ([MetricValueId]) REFERENCES [MetricValues] ([MetricValueId]) ON DELETE CASCADE
+        CONSTRAINT [PK_MetricMetricValues] PRIMARY KEY ([MetricId], [MetricValueId]),
+        CONSTRAINT [FK_MetricMetricValues_Metrics_MetricId] FOREIGN KEY ([MetricId]) REFERENCES [Metrics] ([MetricId]) ON DELETE CASCADE,
+        CONSTRAINT [FK_MetricMetricValues_MetricValues_MetricValueId] FOREIGN KEY ([MetricValueId]) REFERENCES [MetricValues] ([MetricValueId]) ON DELETE CASCADE
     );
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_ExerciseCoreMuscleGroup_MuscleGroupId] ON [ExerciseCoreMuscleGroup] ([MuscleGroupId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_Exercises_TrainingId] ON [Exercises] ([TrainingId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_ExerciseSuppMuscleGroup_MuscleGroupId] ON [ExerciseSuppMuscleGroup] ([MuscleGroupId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_ExerciseTemplateCoreMuscleGroups_MuscleGroupId] ON [ExerciseTemplateCoreMuscleGroups] ([MuscleGroupId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_ExerciseTemplateSuppMuscleGroups_MuscleGroupId] ON [ExerciseTemplateSuppMuscleGroups] ([MuscleGroupId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
-    CREATE INDEX [IX_Metrics_ExerciseTemplateId] ON [Metrics] ([ExerciseTemplateId]);
+    CREATE INDEX [IX_MetricExerciseTemplates_MetricId] ON [MetricExerciseTemplates] ([MetricId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
+BEGIN
+    CREATE INDEX [IX_MetricMetricValues_MetricValueId] ON [MetricMetricValues] ([MetricValueId]);
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_Metrics_MetricTypeId] ON [Metrics] ([MetricTypeId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
-BEGIN
-    CREATE UNIQUE INDEX [IX_Metrics_MetricValueId] ON [Metrics] ([MetricValueId]);
-END;
-
-GO
-
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_MetricValues_SetId] ON [MetricValues] ([SetId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_MuscleGroups_MuscleCategoryId] ON [MuscleGroups] ([MuscleCategoryId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_Sets_DifficultyId] ON [Sets] ([DifficultyId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_Sets_ExerciseId] ON [Sets] ([ExerciseId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     CREATE INDEX [IX_TrainingMuscleCategories_TrainingId] ON [TrainingMuscleCategories] ([TrainingId]);
 END;
 
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180330161654_ChangedGuidsToInts')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180402154153_Initial')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20180330161654_ChangedGuidsToInts', N'2.0.2-rtm-10011');
+    VALUES (N'20180402154153_Initial', N'2.0.2-rtm-10011');
 END;
 
 GO

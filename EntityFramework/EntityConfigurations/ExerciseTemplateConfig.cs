@@ -12,7 +12,6 @@ namespace EntityFramework.EntityConfigurations
         public void Configure(EntityTypeBuilder<ExerciseTemplate> builder)
         {
             builder.Property(m => m.Name).IsRequired().HasMaxLength(20);
-            builder.OwnsOne(m => m.Metrics);
         }
     }
 }

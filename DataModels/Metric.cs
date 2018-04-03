@@ -12,10 +12,9 @@ namespace DataModels
         public int MetricTypeId { get; set; }
         public MetricType MetricType { get; set; }
 
-        public int MetricValueId { get; set; }
-        public MetricValue MetricValue { get; set; }
+        public int? MetricValueId { get; set; }
+        public List<MetricMetricValues> MetricValue { get; set; }
 
-        public int ExerciseTemplateId { get; set; }
-        public ExerciseTemplate ExerciseTemplate { get; set; }
+        public List<MetricExerciseTemplates> ExerciseTemplates { get; set; }
     }
 }

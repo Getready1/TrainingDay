@@ -125,24 +125,43 @@ namespace EntityFramework.Migrations
                     b.Property<int>("MetricId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("ExerciseTemplateId");
-
                     b.Property<int>("MetricTypeId");
 
-                    b.Property<int>("MetricValueId");
+                    b.Property<int?>("MetricValueId");
 
                     b.Property<string>("Name");
 
                     b.HasKey("MetricId");
 
-                    b.HasIndex("ExerciseTemplateId");
-
                     b.HasIndex("MetricTypeId");
 
-                    b.HasIndex("MetricValueId")
-                        .IsUnique();
-
                     b.ToTable("Metrics");
+                });
+
+            modelBuilder.Entity("DataModels.MetricExerciseTemplates", b =>
+                {
+                    b.Property<int>("ExerciseTemplateId");
+
+                    b.Property<int>("MetricId");
+
+                    b.HasKey("ExerciseTemplateId", "MetricId");
+
+                    b.HasIndex("MetricId");
+
+                    b.ToTable("MetricExerciseTemplates");
+                });
+
+            modelBuilder.Entity("DataModels.MetricMetricValues", b =>
+                {
+                    b.Property<int>("MetricId");
+
+                    b.Property<int>("MetricValueId");
+
+                    b.HasKey("MetricId", "MetricValueId");
+
+                    b.HasIndex("MetricValueId");
+
+                    b.ToTable("MetricMetricValues");
                 });
 
             modelBuilder.Entity("DataModels.MetricType", b =>
@@ -294,23 +313,6 @@ namespace EntityFramework.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("DataModels.ExerciseTemplate", b =>
-                {
-                    b.OwnsOne("System.Collections.Generic.List<DataModels.Metric>", "Metrics", b1 =>
-                        {
-                            b1.Property<int>("ExerciseTemplateId");
-
-                            b1.Property<int>("Capacity");
-
-                            b1.ToTable("ExerciseTemplates");
-
-                            b1.HasOne("DataModels.ExerciseTemplate")
-                                .WithOne("Metrics")
-                                .HasForeignKey("System.Collections.Generic.List<DataModels.Metric>", "ExerciseTemplateId")
-                                .OnDelete(DeleteBehavior.Cascade);
-                        });
-                });
-
             modelBuilder.Entity("DataModels.ExerciseTemplateCoreMuscleGroups", b =>
                 {
                     b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
@@ -339,19 +341,35 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.Metric", b =>
                 {
-                    b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
-                        .WithMany()
-                        .HasForeignKey("ExerciseTemplateId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("DataModels.MetricType", "MetricType")
                         .WithMany("Metrics")
                         .HasForeignKey("MetricTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("DataModels.MetricExerciseTemplates", b =>
+                {
+                    b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
+                        .WithMany("Metrics")
+                        .HasForeignKey("ExerciseTemplateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DataModels.Metric", "Metric")
+                        .WithMany("ExerciseTemplates")
+                        .HasForeignKey("MetricId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("DataModels.MetricMetricValues", b =>
+                {
+                    b.HasOne("DataModels.Metric", "Metric")
+                        .WithMany("MetricValue")
+                        .HasForeignKey("MetricId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("DataModels.MetricValue", "MetricValue")
-                        .WithOne("Metric")
-                        .HasForeignKey("DataModels.Metric", "MetricValueId")
+                        .WithMany("Metrics")
+                        .HasForeignKey("MetricValueId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
