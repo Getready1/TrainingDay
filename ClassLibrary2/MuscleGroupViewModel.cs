@@ -6,7 +6,7 @@ namespace ViewModels
 {
     public class MuscleGroupViewModel
     {
-        public int Id { get; set; }
+        public int MuscleGroupId { get; set; }
         public string Name { get; set; }
 
         public int MuscleCategoryId { get; set; }

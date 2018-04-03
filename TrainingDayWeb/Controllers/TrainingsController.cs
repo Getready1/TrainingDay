@@ -34,8 +34,13 @@ namespace TrainingDayWeb.Controllers
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<Training, TrainingViewModel>().ForMember(m => m.MuscleCategories, o => o.MapFrom(s => s.MuscleCategories.Select(r => r.MuscleCategory))).ForMember(v => v.Id, o => o.MapFrom(s => s.TrainingId));
-                cfg.CreateMap<Exercise, ExerciseViewModel>().ForMember(m => m.ExerciseId, o => o.MapFrom(z => z.ExerciseId));
+                cfg.CreateMap<Exercise, ExerciseViewModel>()
+                .ForMember(m => m.ExerciseId, o => o.MapFrom(z => z.ExerciseId))
+                .ForMember(m => m.SupplimentaryMuscleGroups, o => o.MapFrom(s => s.SupplimentaryMuscleGroups.Select(r => r.MuscleGroup)))
+                .ForMember(m => m.CoreMuscleGroups, o => o.MapFrom(s => s.CoreMuscleGroups.Select(r => r.MuscleGroup)));
+
                 cfg.CreateMap<MuscleCategory, MuscleCategoryViewModel>().ForMember(m => m.Id, o => o.MapFrom(s => s.MuscleCategoryId));
+                cfg.CreateMap<MuscleGroup, MuscleGroupViewModel>();
             });
 
             var collection = new List<TrainingViewModel>();

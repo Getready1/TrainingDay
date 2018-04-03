@@ -18,5 +18,8 @@ namespace DataModels
         public List<ExerciseCoreMuscleGroup> CoreMuscleGroups { get; set; }
         public List<ExerciseSuppMuscleGroup> SupplimentaryMuscleGroups { get; set; }
         public List<Set> Sets { get; set; }
+
+        public int ExerciseTemplateId { get; set; }
+        public ExerciseTemplate ExerciseTemplate { get; set; }
     }
 }

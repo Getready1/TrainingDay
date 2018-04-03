@@ -16,7 +16,11 @@ namespace EntityFramework.Repositories.Implementations
 
         public List<Training> GetAllTrainings()
         {
-            return GetAll().Include(m => m.MuscleCategories).ThenInclude(mc => mc.MuscleCategory).Include(m => m.Exercises).ToList();
+            return GetAll()
+                .Include(x => x.MuscleCategories).ThenInclude(y => y.MuscleCategory)
+                .Include(x => x.Exercises).ThenInclude(y => y.SupplimentaryMuscleGroups).ThenInclude(z => z.MuscleGroup)
+                .Include(x => x.Exercises).ThenInclude(y => y.CoreMuscleGroups).ThenInclude(z => z.MuscleGroup)
+                .ToList();
         }
 
         public void Update(Training training) => context.Entry(training).State = EntityState.Modified;

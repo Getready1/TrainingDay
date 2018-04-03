@@ -15,5 +15,6 @@ namespace DataModels
         public List<ExerciseTemplateSuppMuscleGroups> SupplimentaryMuscleGroups { get; set; }
 
         public List<MetricExerciseTemplates> Metrics { get; set; }
+        public List<Exercise> Exercises { get; set; }
     }
 }

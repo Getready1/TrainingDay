@@ -13,7 +13,7 @@
       "launchBrowser": true,
       "launchUrl": "api/trainings",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Prod"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "TrainingDayWeb": {

@@ -37,6 +37,8 @@ namespace EntityFramework.Migrations
                     b.Property<int>("ExerciseId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("ExerciseTemplateId");
+
                     b.Property<string>("ImagePath");
 
                     b.Property<string>("Name")
@@ -46,6 +48,8 @@ namespace EntityFramework.Migrations
                     b.Property<int>("TrainingId");
 
                     b.HasKey("ExerciseId");
+
+                    b.HasIndex("ExerciseTemplateId");
 
                     b.HasIndex("TrainingId");
 
@@ -281,6 +285,11 @@ namespace EntityFramework.Migrations
 
             modelBuilder.Entity("DataModels.Exercise", b =>
                 {
+                    b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
+                        .WithMany("Exercises")
+                        .HasForeignKey("ExerciseTemplateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("DataModels.Training", "Training")
                         .WithMany("Exercises")
                         .HasForeignKey("TrainingId")
