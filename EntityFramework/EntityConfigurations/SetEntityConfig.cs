@@ -11,7 +11,7 @@ namespace EntityFramework.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<Set> builder)
         {
-            builder.OwnsOne(m => m.Metrics);
+            //builder.OwnsOne(m => m.Metrics);
         }
     }
 }
