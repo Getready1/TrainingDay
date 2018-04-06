@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using DataModels;
+using EntityFramework;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ViewModels;
 
 namespace TrainingDayWeb.Controllers
 {
@@ -11,11 +16,27 @@ namespace TrainingDayWeb.Controllers
     [Route("api/MuscleCategories")]
     public class MuscleCategoriesController : Controller
     {
+        private AppDataContext context;
+
+        public MuscleCategoriesController(AppDataContext context)
+        {
+            this.context = context;
+        }
         // GET: api/MuscleCategories
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<MuscleCategoryViewModel> Get()
         {
-            return new string[] { "value1", "value2" };
+            var muscleCategories = context.MuscleCategories.ToList();
+
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<MuscleCategory, MuscleCategoryViewModel>();
+            });
+
+            var muscleCategoriesVM = new List<MuscleCategoryViewModel>();
+            muscleCategories.ForEach(mc => muscleCategoriesVM.Add(Mapper.Map<MuscleCategory, MuscleCategoryViewModel>(mc)));
+
+            return muscleCategoriesVM;
         }
 
         // GET: api/MuscleCategories/5

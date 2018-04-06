@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using DataModels;
+using EntityFramework;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ViewModels;
 
 namespace TrainingDayWeb.Controllers
 {
@@ -11,11 +16,29 @@ namespace TrainingDayWeb.Controllers
     [Route("api/Sets")]
     public class SetsController : Controller
     {
+        private AppDataContext context;
+
+        public SetsController(AppDataContext context)
+        {
+            this.context = context;
+        }
+
         // GET: api/Sets
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<SetViewModel> Get()
         {
-            return new string[] { "value1", "value2" };
+            var sets = context.Sets.Include(x => x.MetricValues).ToList();
+
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<MetricValue, MetricValueViewModel>();
+                cfg.CreateMap<Set, SetViewModel>();
+            });
+
+            var setsVM = new List<SetViewModel>();
+            sets.ForEach(s => setsVM.Add(Mapper.Map<Set, SetViewModel>(s)));
+
+            return setsVM;
         }
 
         // GET: api/Sets/5

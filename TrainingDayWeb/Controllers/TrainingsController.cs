@@ -39,7 +39,7 @@ namespace TrainingDayWeb.Controllers
                 .ForMember(m => m.SupplimentaryMuscleGroups, o => o.MapFrom(s => s.SupplimentaryMuscleGroups.Select(r => r.MuscleGroup)))
                 .ForMember(m => m.CoreMuscleGroups, o => o.MapFrom(s => s.CoreMuscleGroups.Select(r => r.MuscleGroup)));
 
-                cfg.CreateMap<MuscleCategory, MuscleCategoryViewModel>().ForMember(m => m.Id, o => o.MapFrom(s => s.MuscleCategoryId));
+                cfg.CreateMap<MuscleCategory, MuscleCategoryViewModel>().ForMember(m => m.MuscleCategoryId, o => o.MapFrom(s => s.MuscleCategoryId));
                 cfg.CreateMap<MuscleGroup, MuscleGroupViewModel>();
             });
 

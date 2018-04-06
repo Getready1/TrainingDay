@@ -11,7 +11,6 @@ namespace DataModels
     public class Set
     {
         public int SetId { get; set; }
-        public Metrics Metrics { get; set; }
         public Difficulty Difficulty { get; set; }
 
         public int ExericeId { get; set; }

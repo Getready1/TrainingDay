@@ -10,6 +10,6 @@ namespace DataModels
         public double Value { get; set; }
 
         public int MetricId { get; set; }
-        public List<MetricMetricValues> Metrics { get; set; }
+        public Metric Metric { get; set; }
     }
 }

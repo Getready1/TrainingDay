@@ -13,7 +13,7 @@ namespace DataModels
         public MetricType MetricType { get; set; }
 
         public int? MetricValueId { get; set; }
-        public List<MetricMetricValues> MetricValue { get; set; }
+        public List<MetricMetricValues> MetricValues { get; set; }
 
         public List<MetricExerciseTemplates> ExerciseTemplates { get; set; }
     }
