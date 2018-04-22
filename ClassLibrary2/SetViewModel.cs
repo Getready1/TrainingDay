@@ -7,8 +7,9 @@ namespace ViewModels
 {
     public class SetViewModel
     {
-        public int Id { get; set; }
+        public int SetId { get; set; }
+        public Difficulty Difficulty { get; set; }
         public int ExerciseId { get; set; }
-        public List<MetricValueViewModel> MetricValues { get; set; }
+        public List<MetricViewModel> Metrics { get; set; }
     }
 }

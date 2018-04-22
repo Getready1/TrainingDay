@@ -16,3 +16,12 @@ D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.Assemb
 D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
 D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.dll
 D:\SideProjects\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.pdb
+F:\Projs\trainingday\TrainingDay\ClassLibrary1\bin\Debug\netstandard2.0\Common.deps.json
+F:\Projs\trainingday\TrainingDay\ClassLibrary1\bin\Debug\netstandard2.0\Common.dll
+F:\Projs\trainingday\TrainingDay\ClassLibrary1\bin\Debug\netstandard2.0\Common.pdb
+F:\Projs\trainingday\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.csprojResolveAssemblyReference.cache
+F:\Projs\trainingday\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.csproj.CoreCompileInputs.cache
+F:\Projs\trainingday\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.AssemblyInfoInputs.cache
+F:\Projs\trainingday\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
+F:\Projs\trainingday\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.dll
+F:\Projs\trainingday\TrainingDay\ClassLibrary1\obj\Debug\netstandard2.0\Common.pdb

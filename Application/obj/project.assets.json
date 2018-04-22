@@ -3049,23 +3049,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\stibulschii\\.nuget\\packages\\": {},
+    "C:\\Users\\Joradodgeviper\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SideProjects\\TrainingDay\\Application\\Application.csproj",
+      "projectUniqueName": "F:\\Projs\\trainingday\\TrainingDay\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "D:\\SideProjects\\TrainingDay\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\stibulschii\\.nuget\\packages\\",
-      "outputPath": "D:\\SideProjects\\TrainingDay\\Application\\obj\\",
+      "projectPath": "F:\\Projs\\trainingday\\TrainingDay\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\Joradodgeviper\\.nuget\\packages\\",
+      "outputPath": "F:\\Projs\\trainingday\\TrainingDay\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\stibulschii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Joradodgeviper\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3078,11 +3078,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\SideProjects\\TrainingDay\\DataModels\\DataModels.csproj": {
-              "projectPath": "D:\\SideProjects\\TrainingDay\\DataModels\\DataModels.csproj"
+            "F:\\Projs\\trainingday\\TrainingDay\\DataModels\\DataModels.csproj": {
+              "projectPath": "F:\\Projs\\trainingday\\TrainingDay\\DataModels\\DataModels.csproj"
             },
-            "D:\\SideProjects\\TrainingDay\\EntityFramework\\EntityFramework.csproj": {
-              "projectPath": "D:\\SideProjects\\TrainingDay\\EntityFramework\\EntityFramework.csproj"
+            "F:\\Projs\\trainingday\\TrainingDay\\EntityFramework\\EntityFramework.csproj": {
+              "projectPath": "F:\\Projs\\trainingday\\TrainingDay\\EntityFramework\\EntityFramework.csproj"
             }
           }
         }

@@ -22,7 +22,10 @@ namespace EntityFramework
         public DbSet<ExerciseTemplate> ExerciseTemplates { get; set; }
         public DbSet<Metric> Metrics { get; set; }
         public DbSet<MetricType> MetricTypes { get; set; }
-        public DbSet<MetricValue> MetricValues { get; set; }
+        public DbSet<ExerciseTemplateMetricType> ExerciseTemplateMetricTypes { get; set; }
+        public DbSet<TrainingMuscleCategories> TrainingMuscleCategories { get; set; }
+        public DbSet<ExerciseTemplateCoreMuscleGroups> ExerciseTemplateCoreMuscleGroups { get; set; }
+        public DbSet<ExerciseTemplateSuppMuscleGroups> ExerciseTemplateSuppMuscleGroups { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,15 +34,13 @@ namespace EntityFramework
             modelBuilder.ApplyConfiguration(new SetEntityConfig());
             modelBuilder.ApplyConfiguration(new MuscleCategoryEntityConfig());
             modelBuilder.ApplyConfiguration(new MuscleGroupEntityConfig());
-            modelBuilder.ApplyConfiguration(new ExerciseCoreMuscleGroupEntityConfig());
-            modelBuilder.ApplyConfiguration(new ExerciseSuppMuscleGroupEntityConfig());
             modelBuilder.ApplyConfiguration(new TrainingCategoriesEntityConfig());
             modelBuilder.ApplyConfiguration(new ExerciseTemplateSuppMuscleGroupConfig());
             modelBuilder.ApplyConfiguration(new ExerciseTemplateCoreMuscleGroupConfig());
             modelBuilder.ApplyConfiguration(new ExerciseTemplateConfig());
-            modelBuilder.ApplyConfiguration(new MetricExerciseTemplatesConfig());
-            modelBuilder.ApplyConfiguration(new MetricMetricValuesConfig());
-            // awdawdawdawdawd
+            modelBuilder.ApplyConfiguration(new ExerciseTemplateMetricTypeConfig());
+            //modelBuilder.ApplyConfiguration(new ExerciseCoreMuscleGroupEntityConfig());
+            //modelBuilder.ApplyConfiguration(new ExerciseSuppMuscleGroupEntityConfig());
         }
     }
 }

@@ -3,6 +3,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Controllers\MVCControllers\" />
     <Folder Include="Scripts\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>

@@ -13341,23 +13341,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\stibulschii\\.nuget\\packages\\": {},
+    "C:\\Users\\Joradodgeviper\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SideProjects\\TrainingDay\\TrainingDayWeb\\TrainingDayWeb.csproj",
+      "projectUniqueName": "F:\\Projs\\trainingday\\TrainingDay\\TrainingDayWeb\\TrainingDayWeb.csproj",
       "projectName": "TrainingDayWeb",
-      "projectPath": "D:\\SideProjects\\TrainingDay\\TrainingDayWeb\\TrainingDayWeb.csproj",
-      "packagesPath": "C:\\Users\\stibulschii\\.nuget\\packages\\",
-      "outputPath": "D:\\SideProjects\\TrainingDay\\TrainingDayWeb\\obj\\",
+      "projectPath": "F:\\Projs\\trainingday\\TrainingDay\\TrainingDayWeb\\TrainingDayWeb.csproj",
+      "packagesPath": "C:\\Users\\Joradodgeviper\\.nuget\\packages\\",
+      "outputPath": "F:\\Projs\\trainingday\\TrainingDay\\TrainingDayWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\stibulschii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Joradodgeviper\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13370,14 +13370,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\SideProjects\\TrainingDay\\Application\\Application.csproj": {
-              "projectPath": "D:\\SideProjects\\TrainingDay\\Application\\Application.csproj"
+            "F:\\Projs\\trainingday\\TrainingDay\\Application\\Application.csproj": {
+              "projectPath": "F:\\Projs\\trainingday\\TrainingDay\\Application\\Application.csproj"
             },
-            "D:\\SideProjects\\TrainingDay\\ClassLibrary2\\ViewModels.csproj": {
-              "projectPath": "D:\\SideProjects\\TrainingDay\\ClassLibrary2\\ViewModels.csproj"
+            "F:\\Projs\\trainingday\\TrainingDay\\ClassLibrary2\\ViewModels.csproj": {
+              "projectPath": "F:\\Projs\\trainingday\\TrainingDay\\ClassLibrary2\\ViewModels.csproj"
             },
-            "D:\\SideProjects\\TrainingDay\\EntityFramework\\EntityFramework.csproj": {
-              "projectPath": "D:\\SideProjects\\TrainingDay\\EntityFramework\\EntityFramework.csproj"
+            "F:\\Projs\\trainingday\\TrainingDay\\EntityFramework\\EntityFramework.csproj": {
+              "projectPath": "F:\\Projs\\trainingday\\TrainingDay\\EntityFramework\\EntityFramework.csproj"
             }
           }
         }

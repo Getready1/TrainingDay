@@ -25,3 +25,17 @@ D:\SideProjects\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFrame
 D:\SideProjects\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.csproj.CopyComplete
 D:\SideProjects\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.dll
 D:\SideProjects\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.pdb
+F:\Projs\trainingday\TrainingDay\EntityFramework\bin\Debug\netstandard2.0\EntityFramework.deps.json
+F:\Projs\trainingday\TrainingDay\EntityFramework\bin\Debug\netstandard2.0\EntityFramework.dll
+F:\Projs\trainingday\TrainingDay\EntityFramework\bin\Debug\netstandard2.0\EntityFramework.pdb
+F:\Projs\trainingday\TrainingDay\EntityFramework\bin\Debug\netstandard2.0\Common.dll
+F:\Projs\trainingday\TrainingDay\EntityFramework\bin\Debug\netstandard2.0\DataModels.dll
+F:\Projs\trainingday\TrainingDay\EntityFramework\bin\Debug\netstandard2.0\Common.pdb
+F:\Projs\trainingday\TrainingDay\EntityFramework\bin\Debug\netstandard2.0\DataModels.pdb
+F:\Projs\trainingday\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.csprojResolveAssemblyReference.cache
+F:\Projs\trainingday\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.csproj.CoreCompileInputs.cache
+F:\Projs\trainingday\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.AssemblyInfoInputs.cache
+F:\Projs\trainingday\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.AssemblyInfo.cs
+F:\Projs\trainingday\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.csproj.CopyComplete
+F:\Projs\trainingday\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.dll
+F:\Projs\trainingday\TrainingDay\EntityFramework\obj\Debug\netstandard2.0\EntityFramework.pdb

@@ -8,13 +8,12 @@ namespace DataModels
     {
         public int MetricId { get; set; }
         public string Name { get; set; }
+        public double MetricValue { get; set; }
 
         public int MetricTypeId { get; set; }
         public MetricType MetricType { get; set; }
 
-        public int? MetricValueId { get; set; }
-        public List<MetricMetricValues> MetricValues { get; set; }
-
-        public List<MetricExerciseTemplates> ExerciseTemplates { get; set; }
+        public int SetId { get; set; }
+        public Set Set { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace ViewModels
 {
     public class DifficultyViewModel
     {
-        public int Id { get; set; }
+        public int DifficultyId { get; set; }
         public string Name { get; set; }
     }
 }

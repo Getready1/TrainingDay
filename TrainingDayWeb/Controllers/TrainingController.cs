@@ -33,10 +33,22 @@ namespace TrainingDayWeb.Controllers
             return View(collection);
         }
 
-        [HttpGet]
+        // GET: Training/Create
         public IActionResult Create()
         {
-            return View();
+            return View(new TrainingViewModel { CreationDate = DateTime.UtcNow });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(TrainingViewModel trainingVM)
+        {
+            if (ModelState.IsValid)
+            {
+                trainingManager.Add(Mapper.Map<TrainingViewModel, Training>(trainingVM));
+                return RedirectToAction(nameof(Index));
+            }
+            return View(trainingVM);
         }
     }
 }

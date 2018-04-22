@@ -20,18 +20,28 @@ namespace EntityFramework.Repositories.Implementations
             this.dbSet = context.Set<T>();
         }
         public IQueryable<T> GetAll() => dbSet;
-        public void Add(T entity) => dbSet.Add(entity);
+        public void Add(T entity)
+        {
+            dbSet.Add(entity);
+            context.SaveChanges();
+        }
         public void DeleteById(Guid id)
         {
             var toDelete = dbSet.Find(id);
             dbSet.Remove(toDelete);
+            context.SaveChanges();
         }
         public void DeleteById(int id)
         {
             var toDelete = dbSet.Find(id);
             dbSet.Remove(toDelete);
+            context.SaveChanges();
         }
-        public void Delete(T entity) => dbSet.Remove(entity);
+        public void Delete(T entity)
+        {
+            dbSet.Remove(entity);
+            context.SaveChanges();
+        }
         public T GetById(Guid id) => dbSet.Find(id);
         public T GetById(int id) => dbSet.Find(id);
     }

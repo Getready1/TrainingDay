@@ -17,6 +17,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TrainingDayWeb.Extensions;
 
 namespace TrainingDayWeb
 {
@@ -63,6 +64,8 @@ namespace TrainingDayWeb
             {
                 routes.MapRoute("default", "{controller=Training}/{action=Index}/{id?}");
             });
+
+            app.ConfigureMappings();
         }
     }
     public class DefaultModule : Module

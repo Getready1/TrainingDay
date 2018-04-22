@@ -56,32 +56,6 @@ namespace EntityFramework.Migrations
                     b.ToTable("Exercises");
                 });
 
-            modelBuilder.Entity("DataModels.ExerciseCoreMuscleGroup", b =>
-                {
-                    b.Property<int>("ExcersiceId");
-
-                    b.Property<int>("MuscleGroupId");
-
-                    b.HasKey("ExcersiceId", "MuscleGroupId");
-
-                    b.HasIndex("MuscleGroupId");
-
-                    b.ToTable("ExerciseCoreMuscleGroup");
-                });
-
-            modelBuilder.Entity("DataModels.ExerciseSuppMuscleGroup", b =>
-                {
-                    b.Property<int>("ExcersiceId");
-
-                    b.Property<int>("MuscleGroupId");
-
-                    b.HasKey("ExcersiceId", "MuscleGroupId");
-
-                    b.HasIndex("MuscleGroupId");
-
-                    b.ToTable("ExerciseSuppMuscleGroup");
-                });
-
             modelBuilder.Entity("DataModels.ExerciseTemplate", b =>
                 {
                     b.Property<int>("ExerciseTemplateId")
@@ -111,6 +85,19 @@ namespace EntityFramework.Migrations
                     b.ToTable("ExerciseTemplateCoreMuscleGroups");
                 });
 
+            modelBuilder.Entity("DataModels.ExerciseTemplateMetricType", b =>
+                {
+                    b.Property<int>("MetricTypeId");
+
+                    b.Property<int>("ExerciseTemplateId");
+
+                    b.HasKey("MetricTypeId", "ExerciseTemplateId");
+
+                    b.HasIndex("ExerciseTemplateId");
+
+                    b.ToTable("ExerciseTemplateMetricTypes");
+                });
+
             modelBuilder.Entity("DataModels.ExerciseTemplateSuppMuscleGroups", b =>
                 {
                     b.Property<int>("ExerciseTemplateId");
@@ -131,41 +118,19 @@ namespace EntityFramework.Migrations
 
                     b.Property<int>("MetricTypeId");
 
-                    b.Property<int?>("MetricValueId");
+                    b.Property<double>("MetricValue");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("SetId");
 
                     b.HasKey("MetricId");
 
                     b.HasIndex("MetricTypeId");
 
+                    b.HasIndex("SetId");
+
                     b.ToTable("Metrics");
-                });
-
-            modelBuilder.Entity("DataModels.MetricExerciseTemplates", b =>
-                {
-                    b.Property<int>("ExerciseTemplateId");
-
-                    b.Property<int>("MetricId");
-
-                    b.HasKey("ExerciseTemplateId", "MetricId");
-
-                    b.HasIndex("MetricId");
-
-                    b.ToTable("MetricExerciseTemplates");
-                });
-
-            modelBuilder.Entity("DataModels.MetricMetricValues", b =>
-                {
-                    b.Property<int>("MetricId");
-
-                    b.Property<int>("MetricValueId");
-
-                    b.HasKey("MetricId", "MetricValueId");
-
-                    b.HasIndex("MetricValueId");
-
-                    b.ToTable("MetricMetricValues");
                 });
 
             modelBuilder.Entity("DataModels.MetricType", b =>
@@ -178,24 +143,6 @@ namespace EntityFramework.Migrations
                     b.HasKey("MetricTypeId");
 
                     b.ToTable("MetricTypes");
-                });
-
-            modelBuilder.Entity("DataModels.MetricValue", b =>
-                {
-                    b.Property<int>("MetricValueId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("MetricId");
-
-                    b.Property<int?>("SetId");
-
-                    b.Property<double>("Value");
-
-                    b.HasKey("MetricValueId");
-
-                    b.HasIndex("SetId");
-
-                    b.ToTable("MetricValues");
                 });
 
             modelBuilder.Entity("DataModels.MuscleCategory", b =>
@@ -237,9 +184,7 @@ namespace EntityFramework.Migrations
 
                     b.Property<int?>("DifficultyId");
 
-                    b.Property<int?>("ExerciseId");
-
-                    b.Property<int>("ExericeId");
+                    b.Property<int>("ExerciseId");
 
                     b.HasKey("SetId");
 
@@ -296,32 +241,6 @@ namespace EntityFramework.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("DataModels.ExerciseCoreMuscleGroup", b =>
-                {
-                    b.HasOne("DataModels.Exercise", "Exercise")
-                        .WithMany("CoreMuscleGroups")
-                        .HasForeignKey("ExcersiceId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("DataModels.MuscleGroup", "MuscleGroup")
-                        .WithMany("CoreExcercises")
-                        .HasForeignKey("MuscleGroupId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("DataModels.ExerciseSuppMuscleGroup", b =>
-                {
-                    b.HasOne("DataModels.Exercise", "Exercise")
-                        .WithMany("SupplimentaryMuscleGroups")
-                        .HasForeignKey("ExcersiceId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("DataModels.MuscleGroup", "MuscleGroup")
-                        .WithMany("SupExcercises")
-                        .HasForeignKey("MuscleGroupId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
             modelBuilder.Entity("DataModels.ExerciseTemplateCoreMuscleGroups", b =>
                 {
                     b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
@@ -332,6 +251,19 @@ namespace EntityFramework.Migrations
                     b.HasOne("DataModels.MuscleGroup", "MuscleGroup")
                         .WithMany("CoreExcerciseTemplates")
                         .HasForeignKey("MuscleGroupId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("DataModels.ExerciseTemplateMetricType", b =>
+                {
+                    b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
+                        .WithMany("MetricTypes")
+                        .HasForeignKey("ExerciseTemplateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DataModels.MetricType", "MetricType")
+                        .WithMany("ExerciseTemplates")
+                        .HasForeignKey("MetricTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -351,48 +283,20 @@ namespace EntityFramework.Migrations
             modelBuilder.Entity("DataModels.Metric", b =>
                 {
                     b.HasOne("DataModels.MetricType", "MetricType")
-                        .WithMany("Metrics")
+                        .WithMany()
                         .HasForeignKey("MetricTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
 
-            modelBuilder.Entity("DataModels.MetricExerciseTemplates", b =>
-                {
-                    b.HasOne("DataModels.ExerciseTemplate", "ExerciseTemplate")
+                    b.HasOne("DataModels.Set", "Set")
                         .WithMany("Metrics")
-                        .HasForeignKey("ExerciseTemplateId")
+                        .HasForeignKey("SetId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("DataModels.Metric", "Metric")
-                        .WithMany("ExerciseTemplates")
-                        .HasForeignKey("MetricId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("DataModels.MetricMetricValues", b =>
-                {
-                    b.HasOne("DataModels.Metric", "Metric")
-                        .WithMany("MetricValue")
-                        .HasForeignKey("MetricId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("DataModels.MetricValue", "MetricValue")
-                        .WithMany("Metrics")
-                        .HasForeignKey("MetricValueId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("DataModels.MetricValue", b =>
-                {
-                    b.HasOne("DataModels.Set")
-                        .WithMany("MetricValues")
-                        .HasForeignKey("SetId");
                 });
 
             modelBuilder.Entity("DataModels.MuscleGroup", b =>
                 {
                     b.HasOne("DataModels.MuscleCategory", "MuscleCategory")
-                        .WithMany("MuscleGroups")
+                        .WithMany()
                         .HasForeignKey("MuscleCategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
@@ -405,27 +309,8 @@ namespace EntityFramework.Migrations
 
                     b.HasOne("DataModels.Exercise", "Exercise")
                         .WithMany("Sets")
-                        .HasForeignKey("ExerciseId");
-
-                    b.OwnsOne("DataModels.ComplexModels.Metrics", "Metrics", b1 =>
-                        {
-                            b1.Property<int>("SetId");
-
-                            b1.Property<double>("Distance");
-
-                            b1.Property<double>("Duration");
-
-                            b1.Property<int>("Repetitions");
-
-                            b1.Property<double>("Weight");
-
-                            b1.ToTable("Sets");
-
-                            b1.HasOne("DataModels.Set")
-                                .WithOne("Metrics")
-                                .HasForeignKey("DataModels.ComplexModels.Metrics", "SetId")
-                                .OnDelete(DeleteBehavior.Cascade);
-                        });
+                        .HasForeignKey("ExerciseId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("DataModels.TrainingMuscleCategories", b =>

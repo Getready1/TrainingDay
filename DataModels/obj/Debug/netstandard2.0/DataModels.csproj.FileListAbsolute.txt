@@ -25,3 +25,17 @@ D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.Assem
 D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CopyComplete
 D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.dll
 D:\SideProjects\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.pdb
+F:\Projs\trainingday\TrainingDay\DataModels\bin\Debug\netstandard2.0\DataModels.deps.json
+F:\Projs\trainingday\TrainingDay\DataModels\bin\Debug\netstandard2.0\DataModels.dll
+F:\Projs\trainingday\TrainingDay\DataModels\bin\Debug\netstandard2.0\DataModels.pdb
+F:\Projs\trainingday\TrainingDay\DataModels\bin\Debug\netstandard2.0\Common.dll
+F:\Projs\trainingday\TrainingDay\DataModels\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+F:\Projs\trainingday\TrainingDay\DataModels\bin\Debug\netstandard2.0\Common.pdb
+F:\Projs\trainingday\TrainingDay\DataModels\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+F:\Projs\trainingday\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.csprojResolveAssemblyReference.cache
+F:\Projs\trainingday\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CoreCompileInputs.cache
+F:\Projs\trainingday\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfoInputs.cache
+F:\Projs\trainingday\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.AssemblyInfo.cs
+F:\Projs\trainingday\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.csproj.CopyComplete
+F:\Projs\trainingday\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.dll
+F:\Projs\trainingday\TrainingDay\DataModels\obj\Debug\netstandard2.0\DataModels.pdb

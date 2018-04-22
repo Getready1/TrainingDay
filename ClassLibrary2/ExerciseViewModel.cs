@@ -13,8 +13,6 @@ namespace ViewModels
         public int TrainingId { get; set; }
         public int ExerciseTemplateId { get; set; }
 
-        public List<MuscleGroupViewModel> CoreMuscleGroups { get; set; }
-        public List<MuscleGroupViewModel> SupplimentaryMuscleGroups { get; set; }
         public List<SetViewModel> Sets { get; set; }
     }
 }

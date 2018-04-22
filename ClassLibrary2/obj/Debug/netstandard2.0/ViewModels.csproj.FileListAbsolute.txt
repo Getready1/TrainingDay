@@ -25,3 +25,17 @@ D:\SideProjects\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.As
 D:\SideProjects\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.csproj.CopyComplete
 D:\SideProjects\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.dll
 D:\SideProjects\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.pdb
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\bin\Debug\netstandard2.0\ViewModels.deps.json
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\bin\Debug\netstandard2.0\ViewModels.dll
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\bin\Debug\netstandard2.0\ViewModels.pdb
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\bin\Debug\netstandard2.0\Common.dll
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\bin\Debug\netstandard2.0\DataModels.dll
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\bin\Debug\netstandard2.0\Common.pdb
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\bin\Debug\netstandard2.0\DataModels.pdb
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.csprojResolveAssemblyReference.cache
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.csproj.CoreCompileInputs.cache
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.AssemblyInfoInputs.cache
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.AssemblyInfo.cs
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.csproj.CopyComplete
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.dll
+F:\Projs\trainingday\TrainingDay\ClassLibrary2\obj\Debug\netstandard2.0\ViewModels.pdb

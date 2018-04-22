@@ -12,9 +12,6 @@ namespace DataModels
         public int MuscleCategoryId { get; set; }
         public MuscleCategory MuscleCategory { get; set; }
 
-        public List<ExerciseCoreMuscleGroup> CoreExcercises { get; set; }
-        public List<ExerciseSuppMuscleGroup> SupExcercises { get; set; }
-
         public List<ExerciseTemplateCoreMuscleGroups> CoreExcerciseTemplates { get; set; }
         public List<ExerciseTemplateSuppMuscleGroups> SupExcercisesTemplates { get; set; }
     }

@@ -14,6 +14,7 @@ namespace EntityFramework.EntityConfigurations
             builder.Property(m => m.Name).IsRequired().HasMaxLength(20);
 
             builder.HasMany(x => x.Exercises).WithOne(y => y.ExerciseTemplate);
+            builder.HasMany(x => x.MetricTypes);
         }
     }
 }

@@ -17,9 +17,12 @@ namespace EntityFramework.Repositories.Implementations
         public List<Training> GetAllTrainings()
         {
             return GetAll()
-                .Include(x => x.MuscleCategories).ThenInclude(y => y.MuscleCategory)
-                .Include(x => x.Exercises).ThenInclude(y => y.SupplimentaryMuscleGroups).ThenInclude(z => z.MuscleGroup)
-                .Include(x => x.Exercises).ThenInclude(y => y.CoreMuscleGroups).ThenInclude(z => z.MuscleGroup)
+                .Include(x => x.Exercises)
+                    .ThenInclude(x => x.Sets)
+                        .ThenInclude(x => x.Metrics)
+                .Include(x => x.Exercises)
+                    .ThenInclude(x => x.Sets)
+                        .ThenInclude(x => x.Difficulty)
                 .ToList();
         }
 

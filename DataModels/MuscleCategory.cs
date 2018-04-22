@@ -8,7 +8,6 @@ namespace DataModels
         public int MuscleCategoryId { get; set; }
         public string Name { get; set; }
 
-        public List<MuscleGroup> MuscleGroups { get; set; }
         public List<TrainingMuscleCategories> Trainings { get; set; }
     }
 }

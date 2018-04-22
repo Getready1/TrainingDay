@@ -7,14 +7,14 @@ using System.Text;
 
 namespace EntityFramework.EntityConfigurations
 {
-    public class ExerciseCoreMuscleGroupEntityConfig : IEntityTypeConfiguration<ExerciseCoreMuscleGroup>
-    {
-        public void Configure(EntityTypeBuilder<ExerciseCoreMuscleGroup> builder)
-        {
-            builder.HasKey(m => new { m.ExcersiceId, m.MuscleGroupId });
+    //public class ExerciseCoreMuscleGroupEntityConfig : IEntityTypeConfiguration<ExerciseCoreMuscleGroup>
+    //{
+    //    public void Configure(EntityTypeBuilder<ExerciseCoreMuscleGroup> builder)
+    //    {
+    //        builder.HasKey(m => new { m.ExcersiceId, m.MuscleGroupId });
 
-            builder.HasOne(x => x.Exercise).WithMany(y => y.CoreMuscleGroups).HasForeignKey(z => z.ExcersiceId);
-            builder.HasOne(x => x.MuscleGroup).WithMany(y => y.CoreExcercises).HasForeignKey(z => z.MuscleGroupId);
-        }
-    }
+    //        builder.HasOne(x => x.Exercise).WithMany(y => y.CoreMuscleGroups).HasForeignKey(z => z.ExcersiceId);
+    //        builder.HasOne(x => x.MuscleGroup).WithMany(y => y.CoreExcercises).HasForeignKey(z => z.MuscleGroupId);
+    //    }
+    //}
 }
